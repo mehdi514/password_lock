@@ -12,4 +12,9 @@ PasswordLock.unlock pid,"your_pass"
 PasswordLock.reset pid,{"oldpassword","newpassword"}
 
 ```
+### test 
+```elixir
+mix test
+
+```
 
