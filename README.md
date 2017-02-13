@@ -1,21 +1,15 @@
 # PasswordLock
-
-**TODO: Add description**
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `password_lock` to your list of dependencies in `mix.exs`:
-
+## Usage 
 ```elixir
-def deps do
-  [{:password_lock, "~> 0.1.0"}]
-end
+{:ok,pid } -> PasswordLock.start_link("mypass")
+```
+### Unlock
+```elixir
+PasswordLock.unlock pid,"your_pass"
+```
+### reset 
+```
+PasswordLock.reset pid,{"oldpassword","newpassword"}
+
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/password_lock](https://hexdocs.pm/password_lock).
-
-# password_lock
-# password_lock
