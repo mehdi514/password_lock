@@ -8,7 +8,7 @@
 PasswordLock.unlock pid,"your_pass"
 ```
 ### reset 
-```
+```elixir
 PasswordLock.reset pid,{"oldpassword","newpassword"}
 
 ```
