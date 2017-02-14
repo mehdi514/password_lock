@@ -38,7 +38,7 @@ defmodule PasswordLock do
     {:ok, [password]} # ----------- state is stored as list of passwords
   end
 
-  def handle_call({:unlock, password}, _from, passwords) do # ----> aynchronous request
+  def handle_call({:unlock, password}, _from, passwords) do # ----> synchronous request
     if password in passwords do
       {:reply, :ok, passwords}
 
