@@ -31,8 +31,8 @@ defmodule PasswordLogger do
   end
 
   def handle_cast({:log, logtext}, file_name) do
-    File.chmod!(file_name,0o755)
     {:ok, file} = File.open file_name, [:append]
+    File.chmod!(file_name,0o755)
     IO.binwrite file, logtext <> "\n"
     File.close file
     {:noreply,file_name}
